@@ -33,7 +33,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="hero-subtitle">
-                        I Design Websites, Build AI Automations &amp; Scale Brands with Data-Driven Marketing.
+                        I Develop Websites, Build AI Automations &amp; Scale Brands with Data-Driven Marketing.
                     </p>
 
                     <div className="hero-buttons">
@@ -56,7 +56,7 @@ export default function Hero() {
                     <div className="hero-glow" />
                     <div className="hero-image-ring">
                         <div className="hero-image-container">
-                            <img src={profileImg} alt="Abdul Ahad - web designer & AI Specialist" />
+                            <img src={profileImg} alt="Abdul Ahad - web developer & AI Specialist" />
                         </div>
                     </div>
                 </motion.div>
