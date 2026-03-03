@@ -56,7 +56,7 @@ export default function Hero() {
                     <div className="hero-glow" />
                     <div className="hero-image-ring">
                         <div className="hero-image-container">
-                            <img src={profileImg} alt="Abdul Ahad - Web Designer & AI Specialist" />
+                            <img src={profileImg} alt="Abdul Ahad - web designer & AI Specialist" />
                         </div>
                     </div>
                 </motion.div>

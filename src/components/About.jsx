@@ -34,7 +34,7 @@ export default function About() {
                         Hi, I'm <span className="highlight">Abdul Ahad</span>
                     </h2>
                     <p className="about-role">
-                        A Web Designer, AI Automation Specialist &amp; Performance Marketer.
+                        A web designer, AI Automation Specialist &amp; Performance Marketer.
                     </p>
                     <p>
                         I help businesses automate operations, generate leads, and build

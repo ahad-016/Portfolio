@@ -33,7 +33,7 @@ export default function CV() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <p>
-                        I am a Web Designer, AI Automation Specialist, and Performance Marketer with
+                        I am a web designer, AI Automation Specialist, and Performance Marketer with
                         expertise in building high-converting websites, intelligent automation workflows,
                         and data-driven marketing campaigns. I combine modern tech stacks with creative
                         design to deliver exceptional digital experiences.
