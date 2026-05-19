@@ -55,7 +55,7 @@ export default function About() {
                         </li>
                     </ul>
 
-                    <div className="about-stats" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+                    <div className="about-stats">
                         <div className="about-stat glass-card-dark">
                             <h3 style={{ background: 'var(--grad-teal)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>15+</h3>
                             <p style={{ color: 'var(--clr-text-light)' }}>Projects Built</p>

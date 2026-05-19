@@ -70,7 +70,7 @@ export default function Contact() {
                     Have a project in mind? Contact me for websites, AI automations, SaaS tools, or digital services.
                 </motion.p>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', marginTop: '3rem' }}>
                     {/* Left side: Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
