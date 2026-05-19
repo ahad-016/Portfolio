@@ -3,30 +3,30 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Colors */
-  --clr-primary: #0F172A;
-  --clr-primary-light: #1E293B;
-  --clr-primary-lighter: #334155;
-  --clr-accent-teal: #14B8A6;
-  --clr-accent-teal-dark: #0D9488;
-  --clr-accent-gold: #D4A843;
-  --clr-accent-gold-light: #F5D78E;
-  --clr-bg: #F8F6F3;
-  --clr-bg-alt: #F1EDE8;
-  --clr-bg-dark: #0B1121;
-  --clr-text: #1E293B;
-  --clr-text-light: #64748B;
-  --clr-text-white: #F1F5F9;
+  --clr-primary: #050505;
+  --clr-primary-light: #111111;
+  --clr-primary-lighter: #27272A;
+  --clr-accent-teal: #E50914;
+  --clr-accent-teal-dark: #FF1E1E;
+  --clr-accent-gold: #E50914;
+  --clr-accent-gold-light: #FF1E1E;
+  --clr-bg: #050505;
+  --clr-bg-alt: #111111;
+  --clr-bg-dark: #000000;
+  --clr-text: #FFFFFF;
+  --clr-text-light: #A1A1AA;
+  --clr-text-white: #FFFFFF;
   --clr-white: #FFFFFF;
-  --clr-glass: rgba(255, 255, 255, 0.08);
-  --clr-glass-border: rgba(255, 255, 255, 0.15);
-  --clr-glass-light: rgba(255, 255, 255, 0.65);
-  --clr-glass-light-border: rgba(255, 255, 255, 0.45);
+  --clr-glass: rgba(17, 17, 17, 0.6);
+  --clr-glass-border: #27272A;
+  --clr-glass-light: rgba(17, 17, 17, 0.8);
+  --clr-glass-light-border: #27272A;
 
   /* Gradients */
-  --grad-teal: linear-gradient(135deg, #14B8A6, #0EA5E9);
-  --grad-gold: linear-gradient(135deg, #D4A843, #F5D78E);
-  --grad-hero: linear-gradient(135deg, #0B1121 0%, #0F172A 40%, #132041 100%);
-  --grad-card: linear-gradient(135deg, rgba(20, 184, 166, 0.05), rgba(212, 168, 67, 0.05));
+  --grad-teal: linear-gradient(135deg, #E50914, #FF1E1E);
+  --grad-gold: linear-gradient(135deg, #E50914, #FF1E1E);
+  --grad-hero: linear-gradient(135deg, #050505 0%, #111111 50%, #050505 100%);
+  --grad-card: linear-gradient(135deg, rgba(229, 9, 20, 0.05), rgba(255, 30, 30, 0.05));
 
   /* Typography */
   --ff-heading: 'Outfit', sans-serif;
@@ -53,11 +53,11 @@
   --radius-full: 50%;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
-  --shadow-glow-teal: 0 0 30px rgba(20, 184, 166, 0.3);
-  --shadow-glow-gold: 0 0 30px rgba(212, 168, 67, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.8);
+  --shadow-glow-teal: 0 0 30px rgba(229, 9, 20, 0.3);
+  --shadow-glow-gold: 0 0 30px rgba(229, 9, 20, 0.3);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -1286,6 +1286,116 @@ input, textarea, select {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* ========== EDUCATION ========== */
+.education {
+  background: var(--clr-primary);
+  color: var(--clr-text-white);
+}
+
+.education-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.education-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--clr-glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.85rem;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--clr-bg-alt);
+  border: 2px solid var(--clr-accent-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-accent-teal);
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+}
+
+.timeline-content h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-light);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-year {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(229, 9, 20, 0.15);
+  color: var(--clr-accent-teal);
+  border-radius: 50px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timeline-content p strong {
+  color: var(--clr-white);
+}
+
+.education-image-wrapper {
+  position: relative;
+}
+
+.education-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-glow-teal);
+  position: relative;
+  border: 2px solid var(--clr-accent-teal);
+}
+
+.education-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 /* ========== RESPONSIVE ========== */

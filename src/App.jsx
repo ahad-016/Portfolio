@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Services from './components/Services';
 import Projects from './components/Projects';
@@ -21,9 +22,10 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Skills />
         <Services />
         <Projects />
+        <Education />
+        <Skills />
         <Testimonials />
         <CV />
         <SocialLinks />

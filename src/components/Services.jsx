@@ -3,43 +3,55 @@ import { useRef } from 'react';
 import {
     HiOutlineGlobeAlt,
     HiOutlineLightningBolt,
+    HiOutlineCloudUpload,
+    HiOutlineSpeakerphone,
+    HiOutlineBriefcase,
+    HiOutlineChatAlt2,
     HiOutlineUserGroup,
-    HiOutlineChartBar,
-    HiOutlineSearchCircle,
-    HiOutlineFilter,
     HiArrowRight,
 } from 'react-icons/hi';
+import { FaLaptopCode } from 'react-icons/fa';
 
 const services = [
     {
         icon: <HiOutlineGlobeAlt />,
-        title: 'Website Design & Development',
-        description: 'Custom, responsive websites built with modern tech stacks that convert visitors into customers. From landing pages to full-scale web apps.',
+        title: 'Website Development',
+        description: 'Build modern, responsive, and fast websites for businesses and personal brands.',
+    },
+    {
+        icon: <FaLaptopCode />,
+        title: 'Landing Page Design',
+        description: 'High-converting landing pages for products, services, and campaigns.',
     },
     {
         icon: <HiOutlineLightningBolt />,
-        title: 'AI Business Automation',
-        description: 'Streamline your operations with intelligent automation using tools like n8n, Zapier, and OpenAI. Save time and reduce manual work.',
+        title: 'AI Automation Setup',
+        description: 'Automate business tasks using AI tools and workflow automation platforms.',
+    },
+    {
+        icon: <HiOutlineCloudUpload />,
+        title: 'SaaS Product Development',
+        description: 'Build SaaS tools, dashboards, and web applications.',
+    },
+    {
+        icon: <HiOutlineSpeakerphone />,
+        title: 'Digital Marketing Services',
+        description: 'Help businesses improve online visibility, leads, and growth.',
+    },
+    {
+        icon: <HiOutlineBriefcase />,
+        title: 'Business Portfolio Websites',
+        description: 'Professional websites for agencies, freelancers, and local businesses.',
+    },
+    {
+        icon: <HiOutlineChatAlt2 />,
+        title: 'Review Reply Automation',
+        description: 'AI-powered systems to generate replies for customer reviews.',
     },
     {
         icon: <HiOutlineUserGroup />,
         title: 'Lead Generation Systems',
-        description: 'Build automated lead capture and nurturing systems that work 24/7. CRM integration, chatbots, and smart lead scoring.',
-    },
-    {
-        icon: <HiOutlineChartBar />,
-        title: 'Performance Marketing',
-        description: 'Data-driven ad campaigns on Google & Meta that maximize ROI. Conversion tracking, A/B testing, and continuous optimization.',
-    },
-    {
-        icon: <HiOutlineSearchCircle />,
-        title: 'SEO Optimization',
-        description: 'Boost your organic rankings with comprehensive on-page, technical SEO, keyword research, and content strategy.',
-    },
-    {
-        icon: <HiOutlineFilter />,
-        title: 'Sales Funnel Setup',
-        description: 'End-to-end funnel design and implementation. From awareness to conversion, every touchpoint optimized for maximum results.',
+        description: 'Systems and workflows to help businesses collect and manage leads.',
     },
 ];
 
@@ -66,10 +78,11 @@ export default function Services() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    What I <span className="gradient-text">Offer</span>
+                    Services I <span className="gradient-text">Provide</span>
                 </motion.h2>
                 <motion.p
-                    className="section-subtitle"
+                    className="section-title"
+                    style={{ fontSize: 'var(--fs-body)', color: 'var(--clr-text-light)', marginBottom: '3.5rem' }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.1 }}
@@ -85,12 +98,12 @@ export default function Services() {
                     animate={inView ? 'show' : 'hidden'}
                 >
                     {services.map((service, i) => (
-                        <motion.div className="service-card" key={i} variants={cardVariants}>
-                            <div className="service-icon">{service.icon}</div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
-                            <a href="#contact" className="service-link">
-
+                        <motion.div className="service-card glass-card-dark" key={i} variants={cardVariants} style={{ background: 'var(--clr-glass)', border: '1px solid var(--clr-glass-border)', display: 'flex', flexDirection: 'column' }}>
+                            <div className="service-icon" style={{ fontSize: '2.5rem', color: 'var(--clr-accent-teal)', marginBottom: '1rem' }}>{service.icon}</div>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--clr-text-white)' }}>{service.title}</h3>
+                            <p style={{ color: 'var(--clr-text-light)', marginBottom: '1.5rem', flexGrow: 1 }}>{service.description}</p>
+                            <a href="#contact" className="btn btn-outline" style={{ alignSelf: 'flex-start', padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
+                                Get This Service <HiArrowRight />
                             </a>
                         </motion.div>
                     ))}

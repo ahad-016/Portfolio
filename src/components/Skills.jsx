@@ -1,31 +1,31 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { HiCode, HiChip, HiTrendingUp, HiColorSwatch } from 'react-icons/hi';
+import { HiCode, HiChip, HiTrendingUp, HiDatabase } from 'react-icons/hi';
 
 const skillCategories = [
     {
-        title: 'Web Development',
+        title: 'Frontend',
         icon: <HiCode />,
         iconClass: 'web',
-        skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'React.js', 'Node.js', 'Express.js', 'Bootstrap', 'Tailwind CSS', 'REST APIs', 'Git & GitHub', 'Vite'],
+        skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'React Router', 'Tailwind CSS', 'Vite'],
     },
     {
-        title: 'AI & Automation',
+        title: 'Backend / Tools',
+        icon: <HiDatabase />,
+        iconClass: 'design',
+        skills: ['Express JS', 'SaaS Development', 'Node JS', 'MySQL', 'Supabase', 'Python', 'Firebase', 'Python', 'MongoDB'],
+    },
+    {
+        title: 'AI Automation',
         icon: <HiChip />,
         iconClass: 'ai',
-        skills: ['Zapier', 'n8n', 'Make.com', 'OpenAI API', 'Chatbot Automation', 'CRM Automation', 'Lead Flow Automation', 'Web Scraping', 'Supabase', 'Firebase'],
+        skills: ['AI Tools', 'n8n / Automation', 'Zapier', 'Make', 'Vapi ai', 'Claude'],
     },
     {
-        title: 'Digital Marketing & SEO',
+        title: 'Business Skills',
         icon: <HiTrendingUp />,
         iconClass: 'marketing',
-        skills: ['Google Ads', 'Meta Ads', 'Conversion Tracking', 'Google Tag Manager', 'SEO (On-page + Technical)', 'Keyword Research', 'Funnel Building', 'Landing Page Optimization', 'Email Marketing Automation'],
-    },
-    {
-        title: 'Design & Branding',
-        icon: <HiColorSwatch />,
-        iconClass: 'design',
-        skills: ['Canva', 'Figma', 'UI/UX Design', 'Brand Strategy', 'Ad Creative Design'],
+        skills: ['Digital Marketing', 'Cold Calling', 'Client Communication', 'Lead Generation', 'Meta Ads', 'Google ads', 'Google Analytics', 'Marketing Strategies'],
     },
 ];
 
@@ -54,15 +54,16 @@ export default function Skills() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    My <span className="gradient-text">Skills</span>
+                    Skills & <span className="gradient-text">Tools</span>
                 </motion.h2>
                 <motion.p
-                    className="section-subtitle"
+                    className="section-title"
+                    style={{ fontSize: 'var(--fs-body)', color: 'rgba(241, 245, 249, 0.6)', marginBottom: '3.5rem' }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                    Technologies and tools I use to bring ideas to life
+                    Technologies and skills I use to bring ideas to life
                 </motion.p>
 
                 <motion.div
@@ -73,14 +74,14 @@ export default function Skills() {
                     animate={inView ? 'show' : 'hidden'}
                 >
                     {skillCategories.map((cat, i) => (
-                        <motion.div className="skill-card" key={i} variants={cardVariants}>
+                        <motion.div className="skill-card glass-card-dark" key={i} variants={cardVariants} style={{ background: 'var(--clr-glass)', border: '1px solid var(--clr-glass-border)' }}>
                             <div className="skill-card-header">
                                 <div className={`skill-icon ${cat.iconClass}`}>{cat.icon}</div>
                                 <h3>{cat.title}</h3>
                             </div>
                             <div className="skill-tags">
                                 {cat.skills.map((skill, j) => (
-                                    <span className="skill-tag" key={j}>{skill}</span>
+                                    <span className="skill-tag" key={j} style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--clr-glass-border)' }}>{skill}</span>
                                 ))}
                             </div>
                         </motion.div>

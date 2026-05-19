@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight, HiStar } from 'react-icons/hi';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const testimonials = [
     {
@@ -50,7 +51,7 @@ export default function Testimonials() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    Client <span className="gradient-text">Reviews</span>
+                    What Clients <span className="gradient-text">Say</span>
                 </motion.h2>
                 <motion.p
                     className="section-subtitle"
@@ -58,7 +59,7 @@ export default function Testimonials() {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                    What my clients say about working with me
+                    Real feedback from businesses and startups I've worked with
                 </motion.p>
 
                 <motion.div
@@ -70,15 +71,16 @@ export default function Testimonials() {
                     <div className="testimonial-track" style={{ transform: `translateX(-${current * 100}%)` }}>
                         {testimonials.map((t, i) => (
                             <div className="testimonial-card" key={i}>
-                                <div className="testimonial-inner">
-                                    <div className="testimonial-stars">
+                                <div className="testimonial-inner glass-card-dark" style={{ background: 'var(--clr-glass)', border: '1px solid var(--clr-glass-border)', position: 'relative' }}>
+                                    <FaQuoteLeft style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', fontSize: '2rem', color: 'rgba(229, 9, 20, 0.2)' }} />
+                                    <div className="testimonial-stars" style={{ color: 'var(--clr-accent-teal)' }}>
                                         {[...Array(t.stars)].map((_, j) => (
                                             <HiStar key={j} />
                                         ))}
                                     </div>
-                                    <blockquote>"{t.quote}"</blockquote>
-                                    <p className="testimonial-author">{t.author}</p>
-                                    <p className="testimonial-role">{t.role}</p>
+                                    <blockquote style={{ fontSize: '1.1rem', fontStyle: 'italic', margin: '1.5rem 0', color: 'var(--clr-text-white)' }}>"{t.quote}"</blockquote>
+                                    <p className="testimonial-author" style={{ fontWeight: 'bold', color: 'var(--clr-accent-teal)', marginBottom: '0.2rem' }}>{t.author}</p>
+                                    <p className="testimonial-role" style={{ fontSize: '0.875rem', color: 'var(--clr-text-light)' }}>{t.role}</p>
                                 </div>
                             </div>
                         ))}

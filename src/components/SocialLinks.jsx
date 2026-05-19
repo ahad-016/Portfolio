@@ -7,7 +7,7 @@ const socials = [
     { icon: <FaLinkedinIn />, label: 'LinkedIn', url: 'https://linkedin.com/in/ahad016' },
     { icon: <FaGithub />, label: 'GitHub', url: 'https://github.com/ahad-016' },
     { icon: <FaWhatsapp />, label: 'WhatsApp', url: 'https://wa.me/917394872337?text=Hi%20Abdul,%20I%20want%20to%20discuss%20a%20project' },
-    { icon: <HiOutlineMail />, label: 'Email', url: 'mailto:ahad47057@gmail.com?subject=Hello%20Abdul Ahad' },
+    { icon: <HiOutlineMail />, label: 'Email', url: 'mailto:automate@ahadlabs.space?subject=Hello%20Abdul%20Ahad' },
 ];
 
 export default function SocialLinks() {

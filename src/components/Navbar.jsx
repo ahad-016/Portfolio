@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
     { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Reviews', href: '#reviews' },
+    { label: 'Education', href: '#education' },
+    { label: 'Testimonials', href: '#reviews' },
     { label: 'CV', href: '#cv' },
     { label: 'Contact', href: '#contact' },
 ];
@@ -74,6 +74,9 @@ export default function Navbar() {
                                 {item.label}
                             </a>
                         ))}
+                        <a href="#contact" className="btn btn-primary" onClick={(e) => handleNavClick(e, '#contact')} style={{ padding: '0.5rem 1.5rem' }}>
+                            Hire Me
+                        </a>
                     </div>
 
                     <button
